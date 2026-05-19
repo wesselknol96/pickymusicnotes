@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --cell: 19px;
+    --grid-line: 1px;
+    --tile: calc(var(--cell) + var(--grid-line));
+    --tile-2: calc(var(--tile) * 2 + var(--grid-line));
+    --paper: #ffffff;
+    --ink: #2f2b26;
+    --soft-ink: #70675c;
+    --accent-dark: #7a5b00;
+    --accent-soft: #ead08a;
+    --line: rgba(72, 61, 48, 0.22);
+    --button-surface: rgba(255, 255, 255, 0.74);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+    background: var(--paper);
+}
+
+.request-panel {
+    display: grid;
+    gap: var(--tile);
+    min-height: 100vh;
+    padding: var(--tile);
+    background: var(--paper);
+}
+
+h2 {
+    margin: 0;
+    min-height: calc(var(--tile) * 2);
+    font-size: 1.05rem;
+    font-weight: 900;
+    line-height: calc(var(--tile) * 2);
+}
+
+form,
+.request-box {
+    display: grid;
+    gap: calc(var(--tile) / 2);
+}
+
+label {
+    color: var(--soft-ink);
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 0;
+    border-radius: 11px;
+    outline: 1px solid var(--line);
+    outline-offset: -1px;
+    background: var(--button-surface);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+input {
+    height: var(--tile-2);
+    padding: 0 calc(var(--tile) / 2);
+}
+
+textarea {
+    min-height: calc(var(--tile) * 6);
+    padding: calc(var(--tile) / 2);
+    resize: vertical;
+}
+
+.panel-btn {
+    min-height: var(--tile-2);
+    border: 1px solid var(--accent-dark);
+    border-radius: 11px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 900;
+}
+
+.form-message {
+    color: var(--soft-ink);
+    font-size: 0.88rem;
+    font-weight: 800;
+}

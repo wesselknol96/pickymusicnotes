@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picky Music Notes - Learn Chords</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-menu-shell" id="app-menu-shell">
+        <button class="global-auth-button" id="global-auth-button" type="button" title="Open account menu" aria-haspopup="true" aria-expanded="false">in</button>
+        <section class="app-menu" id="app-menu" aria-label="Account and app menu" hidden>
+            <nav class="app-menu-tabs" aria-label="Menu sections">
+                <button class="app-menu-tab active" data-menu-panel="profile" type="button">Account</button>
+                <button class="app-menu-tab" data-menu-panel="color" type="button">Color</button>
+                <button class="app-menu-tab" data-menu-panel="settings" type="button">Settings</button>
+                <button class="app-menu-tab" data-menu-panel="tutorial" type="button">Tutorial</button>
+            </nav>
+            <div class="app-menu-panels">
+                <section class="app-menu-panel active" id="app-menu-profile" aria-label="Account profile">
+                    <h2 class="app-menu-title">Account profiel</h2>
+                    <div class="profile-card">
+                        <span class="profile-avatar" id="menu-profile-avatar">in</span>
+                        <span class="profile-meta">
+                            <span class="profile-name" id="menu-profile-name">Local browser</span>
+                            <span class="profile-email" id="menu-profile-email">Niet ingelogd</span>
+                        </span>
+                    </div>
+                    <p class="app-menu-copy" id="menu-profile-copy">Log in om je online songs en account instellingen te gebruiken.</p>
+                    <div class="app-menu-actions">
+                        <button class="app-menu-action primary" id="menu-login-action" type="button" data-auth-open>Login</button>
+                        <button class="app-menu-action" id="menu-account-action" type="button" data-auth-open hidden>Display name</button>
+                        <button class="app-menu-action" id="menu-logout-action" type="button" data-auth-logout hidden>Logout</button>
+                    </div>
+                </section>
+                <section class="app-menu-panel color-panel" id="app-menu-color" aria-label="Color settings">
+                    <h2 class="app-menu-title">Color</h2>
+                    <div class="theme-strip" id="theme-strip" aria-hidden="true"></div>
+                    <div class="theme-presets" id="theme-presets" aria-label="Color palette presets"></div>
+                    <div class="color-settings-list" id="color-settings-list"></div>
+                    <button class="color-reset-btn" id="color-reset" type="button">Reset palette</button>
+                </section>
+                <section class="app-menu-panel" id="app-menu-settings" aria-label="App settings">
+                    <h2 class="app-menu-title">Settings</h2>
+                </section>
+                <section class="app-menu-panel" id="app-menu-tutorial" aria-label="Tutorial">
+                    <h2 class="app-menu-title">Uitlegpaneel</h2>
+                    <ul class="tutorial-list">
+                        <li>Kies eerst een noot, type en variant om het akkoord op de hals te zien.</li>
+                        <li>Sleep de capo- en eindlijn om andere posities te onderzoeken.</li>
+                        <li>Gebruik het pijltje naar de songwriter om akkoorden naar je song sheet te sturen.</li>
+                        <li>In Color kun je het palet aanpassen; je keuzes worden lokaal onthouden.</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <aside class="ad-rail" aria-label="Advertisement space"></aside>
+
+    <div class="app-pages" id="app-pages">
+        <section class="app-screen chords-screen" aria-label="Chords screen">
+            <nav class="support-tools" aria-label="Picky Music Notes support links">
+                <button class="support-pill" id="request-open" type="button">Request</button>
+                <button class="support-pill support-pill-donate" id="donate-open" type="button">Donate</button>
+            </nav>
+
+            <div class="container">
+                <header class="header">
+                    <div class="title-section">
+                        <h1 class="main-title">Picky Music Notes</h1>
+                        <p class="tagline">Master chords one note at a time</p>
+                    </div>
+                </header>
+
+                <nav class="tabs" aria-label="Instrument tabs">
+                    <button class="tab-btn active" data-instrument="acoustic-guitar" type="button">
+                        <span class="tab-text">Acoustic Guitar</span>
+                    </button>
+                </nav>
+
+                <main class="main-content">
+                    <section class="chord-section">
+                        <div class="chord-controls grid-panel" id="chord-controls" aria-label="Chord picker">
+                            <div class="selector-row note-row" data-row="note">
+                                <div class="selector-label">Note</div>
+                                <div class="selector-options" id="note-row" role="group" aria-label="Halfnotes"></div>
+                            </div>
+
+                            <div class="selector-row type-row" data-row="type">
+                                <div class="selector-label">Type</div>
+                                <div class="selector-options" id="type-row" role="group" aria-label="Chord types"></div>
+                            </div>
+
+                            <div class="selector-row variant-row" data-row="variant">
+                                <div class="selector-label">Variant</div>
+                                <div class="selector-options" id="variant-row" role="group" aria-label="Chord variants"></div>
+                            </div>
+                        </div>
+
+                        <div class="chord-display grid-panel">
+                            <div class="chord-name" id="chord-name">A (Open Chord)</div>
+                            <div class="fretboard-layout">
+                                <div class="fret-notation" id="fret-notation">0-0-2-2-2-0</div>
+                                <div class="fretboard-scroll">
+                                    <div class="fretboard" id="fretboard" aria-label="Acoustic guitar chord diagram"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer class="site-footer">
+                        <p class="visitor-count" id="visitor-count" aria-live="polite">Active visitors: 1</p>
+                    </footer>
+                </main>
+            </div>
+
+            <aside class="scale-tools" aria-label="Scale tools">
+                <label class="scale-toggle" for="pentatonic-toggle">
+                    <input id="pentatonic-toggle" type="checkbox">
+                    <span>Pentatonic</span>
+                </label>
+            </aside>
+
+            <nav class="chord-lock-tools" aria-label="Lock songwriter playback from chord screen">
+                <button class="bridge-btn lock-btn" id="chord-lock-btn" type="button" aria-pressed="false" title="Lock songwriter playback to chord display">
+                    <svg class="lock-icon lock-icon-open" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 10V7.8C7 4.6 9.2 3 11.8 3c2.2 0 3.9 1 4.6 2.8" />
+                        <rect x="5" y="10" width="14" height="10" rx="2.2" />
+                        <path d="M12 14v2" />
+                    </svg>
+                    <svg class="lock-icon lock-icon-closed" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 10V7.8C8 4.8 9.7 3 12 3s4 1.8 4 4.8V10" />
+                        <rect x="5" y="10" width="14" height="10" rx="2.2" />
+                        <path d="M12 14v2" />
+                    </svg>
+                </button>
+            </nav>
+        </section>
+
+        <section class="app-screen songwriter-screen" aria-label="Songwriter screen">
+            <nav class="bridge-tools" aria-label="Picky Music Notes and songwriter tools">
+                <button class="bridge-btn" id="send-chord-btn" type="button" title="Send current chord to songwriter">&rarr;</button>
+                <button class="bridge-btn lock-btn" id="sheet-lock-btn" type="button" aria-pressed="false" title="Lock songwriter playback to chord display">
+                    <svg class="lock-icon lock-icon-open" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 10V7.8C7 4.6 9.2 3 11.8 3c2.2 0 3.9 1 4.6 2.8" />
+                        <rect x="5" y="10" width="14" height="10" rx="2.2" />
+                        <path d="M12 14v2" />
+                    </svg>
+                    <svg class="lock-icon lock-icon-closed" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 10V7.8C8 4.8 9.7 3 12 3s4 1.8 4 4.8V10" />
+                        <rect x="5" y="10" width="14" height="10" rx="2.2" />
+                        <path d="M12 14v2" />
+                    </svg>
+                </button>
+            </nav>
+
+            <iframe class="songwriter-frame" id="songwriter-frame" src="recordplayer/songwriter/songwriter.html" title="Songwriter panel"></iframe>
+        </section>
+    </div>
+
+    <nav class="screen-dots" aria-label="Screen switcher">
+        <button class="screen-dot active" type="button" data-screen="chords" aria-label="Chord screen"></button>
+        <button class="screen-dot screen-lock-dot" id="screen-lock-dot" type="button" aria-label="Lock screens" aria-pressed="false">
+            <svg class="screen-lock-icon screen-lock-icon-open" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10V7.8C7 4.6 9.2 3 11.8 3c2.2 0 3.9 1 4.6 2.8" />
+                <rect x="5" y="10" width="14" height="10" rx="2.2" />
+                <path d="M12 14v2" />
+            </svg>
+            <svg class="screen-lock-icon screen-lock-icon-closed" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 10V7.8C8 4.8 9.7 3 12 3s4 1.8 4 4.8V10" />
+                <rect x="5" y="10" width="14" height="10" rx="2.2" />
+                <path d="M12 14v2" />
+            </svg>
+        </button>
+        <button class="screen-dot" type="button" data-screen="songwriter" aria-label="Songwriter screen"></button>
+    </nav>
+
+    <div class="request-modal app-modal" id="request-modal" hidden>
+        <div class="request-backdrop" data-request-close></div>
+        <section class="request-dialog" aria-label="Request a change popup">
+            <button class="request-close" id="request-close" type="button" aria-label="Close request form">&times;</button>
+            <iframe class="request-frame" id="request-frame" src="chordscreen/widgets/request-panel/request-panel.html" title="Request a change panel"></iframe>
+        </section>
+    </div>
+
+    <div class="request-modal app-modal" id="donate-modal" hidden>
+        <div class="request-backdrop" data-donate-close></div>
+        <section class="request-dialog donate-dialog" aria-label="Donate popup">
+            <button class="request-close" id="donate-close" type="button" aria-label="Close donate panel">&times;</button>
+            <iframe class="request-frame" id="donate-frame" src="chordscreen/widgets/donate-panel/donate-panel.html" title="Donate panel"></iframe>
+        </section>
+    </div>
+
+    <div class="global-auth-modal" id="global-auth-modal" hidden>
+        <form class="global-auth-dialog" id="global-auth-form">
+            <button class="global-auth-close" id="global-auth-close" type="button" aria-label="Close login">&times;</button>
+            <p class="global-auth-kicker">Cloud account</p>
+            <h2 id="global-auth-label">Account</h2>
+            <label class="global-auth-field" data-auth-field="name">Display name <input id="global-auth-name" type="text" autocomplete="name"></label>
+            <label class="global-auth-field" data-auth-field="email">Email <input id="global-auth-email" type="email" autocomplete="email" required></label>
+            <label class="global-auth-field">Password
+                <span class="global-password-field">
+                    <input id="global-auth-password" type="password" autocomplete="current-password" minlength="6" required>
+                    <button class="password-toggle" id="global-password-toggle" type="button" aria-label="Show password" title="Show password">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path>
+                            <circle cx="12" cy="12" r="2.7"></circle>
+                        </svg>
+                    </button>
+                </span>
+            </label>
+            <label class="global-auth-field" data-auth-field="code">Code uit email <input id="global-auth-code" type="text" inputmode="numeric" autocomplete="one-time-code"></label>
+            <label class="global-auth-field" data-auth-field="new-password">Nieuw wachtwoord
+                <span class="global-password-field">
+                    <input id="global-auth-new-password" type="password" autocomplete="new-password" minlength="6">
+                </span>
+            </label>
+            <label class="global-auth-field" data-auth-field="confirm-password">Herhaal wachtwoord
+                <span class="global-password-field">
+                    <input id="global-auth-confirm-password" type="password" autocomplete="new-password" minlength="6">
+                </span>
+            </label>
+            <p class="global-auth-message" id="global-auth-message"></p>
+            <button class="global-auth-link" id="global-auth-forgot" type="button">Wachtwoord vergeten?</button>
+            <div class="global-auth-actions">
+                <button id="global-auth-secondary" type="button">Registreren</button>
+                <button id="global-auth-primary" type="submit">Log in</button>
+            </div>
+            <button id="global-auth-out" type="button" hidden>Log out</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="chordscreen/core/app-core.js"></script>
+    <script src="chordscreen/shared/music-utils.js"></script>
+    <script src="chordscreen/widgets/app-shell/app-shell.js"></script>
+    <script src="chordscreen/widgets/chord-picker/chord-picker.js"></script>
+    <script src="chordscreen/widgets/fretboard/fretboard.js"></script>
+    <script src="js/app-menu.js"></script>
+    <script src="js/global-auth.js"></script>
+</body>
+</html>

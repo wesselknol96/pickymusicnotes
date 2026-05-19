@@ -1,0 +1,1509 @@
+{
+  "songs": [
+    {
+      "id": "song-1779124862690-2a5d664829e5a",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779124862690-ffab9a01e3ca58",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779195055657-5bf60b1e6c0a28",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779195055657-28695afab2abd8",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            },
+            {
+              "id": "subsection-1779124871363-a6904c7ff9cbe8",
+              "type": "tabs",
+              "chords": [],
+              "lyrics": "",
+              "tabs": {
+                "strings": [
+                  "e",
+                  "B",
+                  "G",
+                  "D",
+                  "A",
+                  "E"
+                ],
+                "columns": [
+                  {
+                    "id": "tab-1779124871363-6fb6269230d458",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-ba82a6b01c0488",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-6f33cc48c7532",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-998437b52a5f7",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-614b3029f9d9c",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-b79cbf9fc4411",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-6a8c7a27768ae",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-38fba11b981de8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-eb5905ca2bb458",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-b13f5001bb9b08",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-eb381aca2332e8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-083f58a0739df",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-6978a56120f438",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-f67634eb84a89",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-66dc29ac2a9cb8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-90fb0e3b25c2f",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-09c012c0b1b9d8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-3142566f04e538",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-9039d8e98f514",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-f31ae718c975b",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-df24f8f8887c98",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-ab90057eebac9",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-4c979301a664c",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-5443638b675298",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-867ce2f56162c8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-fcd71d94f88de",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-56aa52401e9a58",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-0d56656301c39",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-cc419eb469024",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-2772b3aac66a08",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-1a36997e32c3e8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-728dfaff8bec3",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-8c4c51a7de87c8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-ca83505e55f5",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-bff480d49a41a",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-316eb0885709a",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-0549b6e7e37b58",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-7f239c66918048",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      17,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124871363-4b77de5af46b58",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  }
+                ]
+              },
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 2
+            },
+            {
+              "id": "subsection-1779124928776-50610d211ff54",
+              "type": "tabs",
+              "chords": [],
+              "lyrics": "",
+              "tabs": {
+                "strings": [
+                  "e",
+                  "B",
+                  "G",
+                  "D",
+                  "A",
+                  "E"
+                ],
+                "columns": [
+                  {
+                    "id": "tab-1779124928776-538624d5d3b1c8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-df80e3b7479c4",
+                    "duration": 1,
+                    "frets": [
+                      6,
+                      7,
+                      4,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-d73ff96975198",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-c1e82606ae0cb",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      6,
+                      5,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-4ef93d279e242",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-4dadfc7ec21428",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-34e5dd8cde3e6",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-c6a7e23d204238",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-0b7654e9b75168",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-e20b10b3f5009",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      -4,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-4e46f510a2b108",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-1961f579ac3648",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-08d3b58b0f2788",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-4513813cbc6c9",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-ad2f0cf3225888",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-d4edbc80a3ddc",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-813e3e60fa4128",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-0c0a6f3f74d268",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-d91e7b6323e9e8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-81066b5ba3772",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-776cb260cf23f8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-f0a3ce067b0bc",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-3fd3988d36b3f8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-b9f65f2b528a5",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-1b2651d5de744",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-c22238c1fb1af",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-4e0e43d22b71b",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-ed131b75f6a3e",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-01e413f63fe8c",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-2f7ef833342de",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-6830e584abf0b",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-7f1cf65326d64",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-64703368f7e3c",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-888ec32976f0f",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-88a94338e57f",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-7a8c952c9425c",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-58ba834c7390b8",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-7221e317e8c818",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "id": "tab-1779124928776-4971f15ff38a7",
+                    "duration": 1,
+                    "frets": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  }
+                ]
+              },
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1
+            }
+          ]
+        }
+      ],
+      "isOnline": false,
+      "countdown": 4
+    },
+    {
+      "id": "song-1778529951780-3916b80fd39a2",
+      "bpm": 98,
+      "title": "You Whisper Quietly",
+      "artist": "Wessel Knol",
+      "isOnline": false,
+      "playable": true,
+      "sections": [
+        {
+          "id": "section-1778529951780-d155889474c3d",
+          "bars": 4,
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "subsections": [
+            {
+              "id": "subsection-1778880129095-989d5d42e6cbb8",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1778880129095-a4ae02a59657a",
+                  "name": "Gsus2",
+                  "bars": 1,
+                  "note": "G",
+                  "type": "sus2",
+                  "variant": "compact strings 3-6"
+                }
+              ],
+              "lyrics": "",
+              "chordLineRepetitions": [
+                2
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1
+            },
+            {
+              "id": "subsection-1779109208145-c73f6b0ae3746",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779109208145-01b8e1be69d91",
+                  "bars": 1,
+                  "name": "C#7",
+                  "note": "C#",
+                  "type": "7",
+                  "variant": "compact strings 3-6"
+                },
+                {
+                  "id": "chord-1779109208145-ae6a5363210c88",
+                  "name": "G",
+                  "bars": 0.125
+                },
+                {
+                  "id": "chord-1779109208145-0f3c1ef302fe5",
+                  "name": "A#add9",
+                  "bars": 0.125,
+                  "note": "A#",
+                  "type": "add9",
+                  "variant": "compact strings 3-6"
+                },
+                {
+                  "id": "chord-1779193262241-9c4303c3c371a",
+                  "name": "Gm7",
+                  "bars": 1,
+                  "note": "G",
+                  "type": "m7",
+                  "variant": "em7 shape"
+                },
+                {
+                  "id": "chord-1779109208145-1c1b2a864e6328",
+                  "bars": 0.5,
+                  "name": "D"
+                },
+                {
+                  "id": "chord-1779109208145-d976c8772d4288",
+                  "name": "G",
+                  "bars": 0.5
+                },
+                {
+                  "id": "chord-1779109208145-cb336c1c308d48",
+                  "name": "G",
+                  "bars": 1
+                },
+                {
+                  "id": "chord-1779109208145-7afecb0a8c16c",
+                  "name": "G",
+                  "bars": 1
+                },
+                {
+                  "id": "chord-1779109208145-c5bb18241d15d",
+                  "name": "G",
+                  "bars": 4
+                },
+                {
+                  "id": "chord-1779193256823-358cfb1ece34d8",
+                  "name": "G",
+                  "bars": 1
+                },
+                {
+                  "id": "chord-1779193258838-1f7f79321ae76",
+                  "name": "G",
+                  "bars": 1
+                },
+                {
+                  "id": "chord-1779193259655-5a0258e0a0a098",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "You sit here next to me, don't you think we're quiet all the time\nHow come we don't open up, and talk about our minds\nAt least now we can be, you and me",
+              "chordLineRepetitions": [
+                4,
+                4,
+                4
+              ],
+              "lyricLineRepetitions": [
+                7,
+                6,
+                4
+              ],
+              "lyricLineDurations": [
+                0.03125,
+                2,
+                4
+              ],
+              "tabRepetitions": 1
+            },
+            {
+              "id": "subsection-1778529951780-d4d17731149d4",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1778529951780-954d449f4a2c48",
+                  "bars": 1,
+                  "name": "G"
+                },
+                {
+                  "id": "chord-1778529951780-c8d409d0b1c48",
+                  "bars": 1,
+                  "name": "C"
+                },
+                {
+                  "id": "chord-1778529951780-22a2fbe0d834d8",
+                  "bars": 1,
+                  "name": "Dmaj7",
+                  "note": "D",
+                  "type": "maj7",
+                  "variant": "compact strings 1-4"
+                }
+              ],
+              "lyrics": "But when you're eyes turn up beyond your hair, I'm dreaming away and",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1
+            }
+          ]
+        },
+        {
+          "id": "section-1778529951780-8775dd15462e6",
+          "bars": 11,
+          "type": "chorus",
+          "title": "Chorus",
+          "comment": "",
+          "subsections": [
+            {
+              "id": "subsection-1778529951780-51a19406a21458",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1778529951780-c50a81c9c03c08",
+                  "bars": 1,
+                  "name": "Gsus2",
+                  "note": "G",
+                  "type": "sus2",
+                  "variant": "compact strings 3-5"
+                },
+                {
+                  "id": "chord-1778529951780-94a8a4c17eff98",
+                  "bars": 1,
+                  "name": "C"
+                },
+                {
+                  "id": "chord-1778529951780-07e11a8ca61f2",
+                  "bars": 1,
+                  "name": "D"
+                },
+                {
+                  "id": "chord-1778529951780-a4304c5def5ed8",
+                  "bars": 1,
+                  "name": "G"
+                }
+              ],
+              "lyrics": "You whisper quietly while holding my hand\nStrongly in love for the phase\nAll day I stay near you to hear what you'd say",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1,
+                1,
+                1
+              ],
+              "lyricLineDurations": [
+                1,
+                2,
+                1
+              ],
+              "tabRepetitions": 1
+            },
+            {
+              "id": "subsection-1778529951780-ad7d78a263efc",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1778529951780-d4d3f6170e1338",
+                  "bars": 1,
+                  "name": "Em"
+                }
+              ],
+              "lyrics": "Wishing to know of your thoughts",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1
+            }
+          ]
+        },
+        {
+          "id": "section-1778529951780-1bf8c1e1baa018",
+          "bars": 4,
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "subsections": [
+            {
+              "id": "subsection-1778529951780-97dc6cdead0a8",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1778529951780-9cd2f63e9f7728",
+                  "bars": 1,
+                  "name": "G"
+                },
+                {
+                  "id": "chord-1778529951780-d0eb8957ea05a",
+                  "bars": 1,
+                  "name": "C"
+                },
+                {
+                  "id": "chord-1778529951780-1e15b7ebf6129",
+                  "bars": 1,
+                  "name": "G"
+                },
+                {
+                  "id": "chord-1778529951780-bd6228a030a1c",
+                  "bars": 1,
+                  "name": "D"
+                }
+              ],
+              "lyrics": "Now we're sitting by the window, and you're reaching for your neck\nI know its now the time to tell you, but I, I just can't think fast enough\nDon't you get my feelings there is, no surprise",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1,
+                1,
+                1
+              ],
+              "lyricLineDurations": [
+                1,
+                1,
+                1
+              ],
+              "tabRepetitions": 1
+            },
+            {
+              "id": "subsection-1778529951780-633b9b77a2d408",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1778529951780-33401960c597b8",
+                  "bars": 1,
+                  "name": "G"
+                },
+                {
+                  "id": "chord-1778529951780-48c7def978edb",
+                  "bars": 1,
+                  "name": "C"
+                },
+                {
+                  "id": "chord-1778529951780-aa1a370b1af708",
+                  "bars": 1,
+                  "name": "D"
+                }
+              ],
+              "lyrics": "But as I'm breathing words with hollow air, I'm dreaming away and",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1
+            }
+          ]
+        },
+        {
+          "id": "section-1779052726167-75473fcbd86a4",
+          "type": "bridge",
+          "title": "Bridge",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779052726167-78c8077f648b68",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779052726167-d12340327ed0c8",
+                  "name": "Emaj7",
+                  "bars": 1,
+                  "note": "E",
+                  "type": "maj7",
+                  "variant": "compact strings 1-4"
+                },
+                {
+                  "id": "chord-1779052900702-710d7f9a2a6be",
+                  "name": "C",
+                  "bars": 1,
+                  "note": "C",
+                  "type": "major",
+                  "variant": "open chord"
+                }
+              ],
+              "lyrics": "You whisper quietly, you whisper silently, you don't need no sound\nYou whisper quietly, you whisper silently, you don't need no sound\n'I need your lips'\nYou whisper quietly\n'I can't live like this'\nYou whisper silently\n'I need your lips on mine'\nYou don't need no sound",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                3,
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "lyricLineDurations": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "tabRepetitions": 1
+            }
+          ]
+        },
+        {
+          "id": "section-1779109961060-1eaf78aba686f8",
+          "bars": 11,
+          "type": "chorus",
+          "title": "Chorus",
+          "comment": "",
+          "subsections": [
+            {
+              "id": "subsection-1779109961060-48e9d9d0aae388",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779109961060-e681c558b0fd2",
+                  "bars": 1,
+                  "name": "Gsus2",
+                  "note": "G",
+                  "type": "sus2",
+                  "variant": "compact strings 3-5"
+                },
+                {
+                  "id": "chord-1779109961060-06a9272a24f6a",
+                  "bars": 1,
+                  "name": "C"
+                },
+                {
+                  "id": "chord-1779109961060-ed6618627c7348",
+                  "bars": 1,
+                  "name": "D"
+                },
+                {
+                  "id": "chord-1779109961060-198e5dd9b4e25",
+                  "bars": 1,
+                  "name": "G"
+                }
+              ],
+              "lyrics": "You whisper quietly while holding my hand\nStrongly in love for the phase\nAll day I stay near you to hear what you'd say",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1,
+                1,
+                1
+              ],
+              "lyricLineDurations": [
+                1,
+                1,
+                1
+              ],
+              "tabRepetitions": 1
+            },
+            {
+              "id": "subsection-1779109961060-c396c670dac238",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779109961060-d05f74b2edc1e8",
+                  "bars": 1,
+                  "name": "Em"
+                }
+              ],
+              "lyrics": "Wishing to know of your thoughts",
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ],
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1
+            }
+          ]
+        }
+      ],
+      "transpose": 12,
+      "beatsPerBar": 4,
+      "randomPlayback": false,
+      "ownerId": "b9887e65-a103-4491-a76b-40f0d6646624",
+      "ownerName": "wessel knol",
+      "updatedAt": "2026-05-13T21:08:28.36+00:00",
+      "capo": 4,
+      "countdown": 0
+    }
+  ]
+}

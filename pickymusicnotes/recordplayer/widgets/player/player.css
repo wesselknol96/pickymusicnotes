@@ -1,0 +1,106 @@
+.player-bar,
+.randomizer-panel {
+    flex-wrap: wrap;
+}
+
+.playback-controls,
+.random-chord-controls {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--tile);
+}
+
+.random-chord-controls {
+    margin-left: auto;
+}
+
+.random-chord-controls[hidden] {
+    display: none;
+}
+
+.edit-mode-bar {
+    gap: calc(var(--tile) * 1.4);
+}
+
+.tiny-field,
+.playable-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: var(--tile-2);
+    color: var(--soft-ink);
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.tiny-field input {
+    display: none;
+}
+
+.playable-toggle input {
+    width: var(--tile);
+    height: var(--tile);
+    accent-color: var(--accent-dark);
+}
+
+.songwriter-app:not(.editing) .edit-detail-toggle {
+    display: none;
+}
+
+.reset-icon {
+    font-size: 1.28rem;
+    line-height: 1;
+}
+
+.songwriter-app:not(.editing) .edit-mode-bar label,
+.songwriter-app:not(.editing) .edit-mode-bar .number-wheel {
+    opacity: 0.62;
+}
+
+.songwriter-app:not(.editing) .edit-mode-bar input,
+.songwriter-app:not(.editing) .edit-mode-bar .number-wheel {
+    pointer-events: none;
+}
+
+.songwriter-app:not(.editing) .display-detail-toggle,
+.songwriter-app:not(.editing) .display-detail-toggle input {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.display-options {
+    display: inline-grid;
+    gap: 2px;
+}
+
+.songwriter-app.playback-disabled .playback-controls,
+.songwriter-app.playback-disabled .random-chord-controls {
+    opacity: 0.46;
+}
+
+.icon-btn:disabled,
+.panel-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.46;
+}
+
+.beat-lamp {
+    width: var(--tile);
+    height: var(--tile);
+    border-radius: 999px;
+    background: var(--danger);
+    box-shadow: inset 0 0 0 2px rgba(var(--ink-rgb), 0.1);
+}
+
+.beat-lamp.bar-start {
+    background: var(--good);
+}
+
+
+.random-output {
+    min-width: var(--tile-2);
+    color: var(--accent-dark);
+    font-weight: 900;
+}
+

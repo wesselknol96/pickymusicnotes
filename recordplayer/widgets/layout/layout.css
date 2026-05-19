@@ -1,0 +1,105 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+:root {
+    --cell: 19px;
+    --grid-line: 1px;
+    --tile: calc(var(--cell) + var(--grid-line));
+    --tile-2: calc(var(--tile) * 2 + var(--grid-line));
+    --paper: #fffdf8;
+    --paper-rgb: 255, 253, 248;
+    --ink: #2f2b26;
+    --ink-rgb: 47, 43, 38;
+    --soft-ink: #70675c;
+    --soft-ink-rgb: 112, 103, 92;
+    --accent: #b99018;
+    --accent-rgb: 185, 144, 24;
+    --accent-dark: #7a5b00;
+    --accent-dark-rgb: 122, 91, 0;
+    --accent-soft: #ead08a;
+    --accent-soft-rgb: 234, 208, 138;
+    --line: rgba(var(--ink-rgb), 0.22);
+    --line-rgb: 72, 61, 48;
+    --danger: #8b2d22;
+    --danger-rgb: 139, 45, 34;
+    --good: #2f7a42;
+    --good-rgb: 47, 122, 66;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    color: var(--ink);
+    font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+    background: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    line-height: var(--tile);
+}
+
+.songwriter-app {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    overflow: hidden;
+    border-radius: 19px;
+    background-color: var(--paper);
+}
+
+.song-toolbar,
+.player-bar,
+.randomizer-panel {
+    display: flex;
+    align-items: center;
+    gap: var(--tile);
+    min-height: calc(var(--tile) * 3);
+    padding: calc(var(--tile) / 2) var(--tile);
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+}
+
+.song-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    justify-content: space-between;
+}
+
+.player-bar {
+    position: sticky;
+    top: calc(var(--tile) * 3);
+    z-index: 19;
+}
+
+.randomizer-panel {
+    position: sticky;
+    top: calc(var(--tile) * 6);
+    z-index: 18;
+}
+
+
+@media (max-width: 760px) {
+    .song-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .song-list-panel {
+        max-height: calc(var(--tile) * 14);
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+

@@ -1,0 +1,20 @@
+@import url('../../../chordscreen/tools/scroll-wheel/scroll-wheel.css');
+
+.number-source {
+    display: none;
+}
+
+.chord-token .number-wheel {
+    --scroll-wheel-width: calc(var(--tile) * 2.25);
+    --scroll-wheel-height: var(--tile-2);
+    --scroll-wheel-current-size: 0.72rem;
+    --scroll-wheel-side-size: 0.52rem;
+}
+
+.chord-token .wheel-number.current {
+    color: var(--soft-ink);
+}
+
+.add-chord {
+    width: var(--tile-2);
+}

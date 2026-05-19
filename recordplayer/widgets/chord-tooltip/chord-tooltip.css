@@ -1,0 +1,207 @@
+.chord-tooltip-anchor {
+    position: relative;
+}
+
+.chord-tooltip {
+    --tooltip-scale: 1.2;
+    position: fixed;
+    left: var(--tooltip-left, 50vw);
+    top: var(--tooltip-top, 50vh);
+    z-index: 80;
+    display: grid;
+    gap: calc(var(--tile) * 0.38);
+    width: min(calc(var(--tile) * 10.2), 72vw);
+    padding: calc(var(--tile) * 0.62) calc(var(--tile) * 0.58) calc(var(--tile) * 0.7);
+    border: 1px solid color-mix(in srgb, var(--tooltip-grid) 34%, transparent);
+    border-radius: 12px;
+    background: var(--tooltip-bg);
+    box-shadow: 0 16px 34px rgba(var(--shadow-rgb), 0.26);
+    color: var(--tooltip-ink);
+    font-size: 0.76rem;
+    font-weight: 900;
+    line-height: 1.2;
+    pointer-events: none;
+    text-align: center;
+    white-space: normal;
+    opacity: 0;
+    transform: translate(-50%, 8px) scale(1.176);
+    transform-origin: 50% 0;
+    transition: opacity 140ms ease, transform 140ms ease;
+}
+
+.chord-tooltip-title {
+    display: grid;
+    min-height: calc(var(--tile) * 1.08);
+    align-items: center;
+    color: var(--tooltip-ink);
+    font-size: 0.8rem;
+    line-height: calc(var(--tile) * 0.72);
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+}
+
+.chord-tooltip-title::after {
+    content: "";
+    justify-self: center;
+    width: calc(var(--tile) * 2);
+    height: 2px;
+    margin-top: calc(var(--tile) * 0.28);
+    border-radius: 999px;
+    background: var(--accent);
+}
+
+.songwriter-app.editing .chord-tooltip,
+.chord-tooltip[hidden] {
+    display: none;
+}
+
+.songwriter-app:not(.editing) .chord-tooltip-anchor:hover .chord-tooltip {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(var(--tooltip-scale));
+}
+
+.chord-tooltip.above {
+    transform: translate(-50%, calc(-100% - 8px)) scale(1.176);
+    transform-origin: 50% 100%;
+}
+
+.chord-tooltip.positioning {
+    opacity: 0 !important;
+    transform: translate(-50%, 8px) scale(1.176) !important;
+    transition: none !important;
+}
+
+.chord-tooltip.positioning.above {
+    transform: translate(-50%, calc(-100% - 8px)) scale(1.176) !important;
+}
+
+.songwriter-app:not(.editing) .chord-tooltip-anchor:hover .chord-tooltip.above {
+    transform: translate(-50%, -100%) scale(var(--tooltip-scale));
+}
+
+.chord-tooltip-fretboard {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    min-width: 0;
+}
+
+.chord-tooltip-fretboard[hidden] {
+    display: none;
+}
+
+.chord-tooltip-fret-grid {
+    --fretboard-offset: 8px;
+    display: grid;
+    grid-template-columns: calc(var(--tile) * 0.66) repeat(6, calc(var(--tile) * 0.72));
+    grid-template-rows: repeat(6, calc(var(--tile) * 0.78)) calc(var(--tile) * 0.58);
+    justify-content: center;
+    min-width: 0;
+    overflow: visible;
+    padding: calc(var(--tile) * 0.18) 0 0;
+    border-radius: 8px;
+    background: transparent;
+    transform: translateX(-9px);
+}
+
+.chord-tooltip-string-label,
+.chord-tooltip-fret-cell,
+.chord-tooltip-fret-number,
+.chord-tooltip-fret-number-spacer {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    min-height: 0;
+    border-bottom: 0;
+}
+
+.chord-tooltip-string-label {
+    color: var(--tooltip-muted);
+    font-size: 0.64rem;
+    font-weight: 900;
+}
+
+.chord-tooltip-fret-cell::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: var(--string-line-width, 1px);
+    background: var(--tooltip-ink);
+    opacity: 0.72;
+    transform: translateY(-50%);
+}
+
+.chord-tooltip-fret-cell,
+.chord-tooltip-fret-number {
+    transform: translateX(var(--fretboard-offset));
+}
+
+.chord-tooltip-fret-cell::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--tooltip-grid);
+}
+
+.chord-tooltip-fret-cell:nth-child(7n + 2) {
+    border-left-color: transparent;
+}
+
+.chord-tooltip-fret-cell:nth-child(7n + 2)::after {
+    background: var(--tooltip-ink);
+}
+
+.chord-tooltip-fret-cell:nth-child(n + 2):nth-child(-n + 7)::after {
+    top: 50%;
+}
+
+.chord-tooltip-fret-cell:nth-child(n + 37):nth-child(-n + 42)::after {
+    bottom: 50%;
+}
+
+.chord-tooltip-fret-cell:nth-child(7n + 7)::before {
+    right: 0;
+}
+
+.chord-tooltip-fret-cell:nth-child(7n + 7)::after {
+    box-shadow: calc(var(--tile) * 0.72) 0 0 var(--tooltip-grid);
+}
+
+.chord-tooltip-fret-number {
+    color: var(--tooltip-muted);
+    font-size: 0.55rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.chord-tooltip-finger-dot {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    width: calc(var(--tile) * 0.58);
+    height: calc(var(--tile) * 0.58);
+    place-items: center;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 94%, var(--paper));
+    color: var(--ink);
+    font-size: 0.52rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.chord-tooltip-finger-dot.muted {
+    background: var(--tooltip-grid);
+    color: var(--tooltip-ink);
+}
+
+.chord-tooltip-fret-cell.muted-string .chord-tooltip-finger-dot {
+    left: calc(var(--tile) * -0.36);
+}

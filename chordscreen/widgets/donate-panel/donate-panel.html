@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="donate-panel.css">
+</head>
+<body>
+    <main class="donate-panel" aria-label="Donate to Picky Music Notes">
+        <section class="donate-box">
+            <p class="donate-kicker">Support Picky Music Notes</p>
+            <h2>Keep the chords coming</h2>
+            <p class="donate-copy">A small donation helps cover hosting, tools, and the next round of music features.</p>
+
+            <form id="donate-form">
+                <label for="donation-amount">Amount</label>
+                <div class="amount-row" role="group" aria-label="Donation amount">
+                    <button class="amount-chip" type="button" data-amount="2">2</button>
+                    <button class="amount-chip" type="button" data-amount="5">5</button>
+                    <button class="amount-chip" type="button" data-amount="10">10</button>
+                </div>
+                <div class="amount-field">
+                    <span aria-hidden="true">EUR</span>
+                    <input id="donation-amount" name="amount" type="number" min="1" step="0.01" inputmode="decimal" placeholder="Minimum 1 euro" required>
+                </div>
+
+                <button class="panel-btn" type="submit">Continue to Stripe</button>
+            </form>
+            <p class="form-message" id="donate-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="donate-panel.js"></script>
+</body>
+</html>

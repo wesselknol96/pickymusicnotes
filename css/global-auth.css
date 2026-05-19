@@ -1,0 +1,205 @@
+.global-auth-button {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 120;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--button-surface-strong);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.76rem;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow: 0 10px 26px rgba(var(--shadow-rgb), 0.14);
+}
+
+.global-auth-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 160;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(var(--overlay-rgb), 0.32);
+}
+
+.global-auth-modal[hidden] {
+    display: none;
+}
+
+.global-auth-dialog {
+    position: relative;
+    display: grid;
+    width: min(360px, calc(100vw - 40px));
+    gap: 12px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    background: var(--paper);
+    box-shadow: 0 18px 42px rgba(var(--shadow-rgb), 0.22);
+}
+
+.global-auth-dialog input,
+.global-auth-dialog button {
+    pointer-events: auto;
+}
+
+.global-auth-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.global-auth-kicker,
+.global-auth-message {
+    margin: 0;
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 900;
+    line-height: 20px;
+}
+
+.global-auth-dialog h2 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 28px;
+}
+
+.global-auth-field {
+    display: grid;
+    gap: 4px;
+    color: var(--soft-ink);
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.global-auth-field[hidden],
+.global-auth-link[hidden] {
+    display: none;
+}
+
+.global-auth-field input,
+.global-password-field input {
+    width: 100%;
+    min-height: 38px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--button-surface);
+    color: var(--ink);
+    font: inherit;
+}
+
+.global-password-field {
+    position: relative;
+    display: grid;
+}
+
+.global-password-field input {
+    padding-right: 46px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--soft-ink);
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible,
+.password-toggle.showing {
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    outline: 0;
+}
+
+.password-toggle svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.global-auth-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.global-auth-link {
+    justify-self: start;
+    min-height: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--accent-dark);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-align: left;
+}
+
+.global-auth-actions button {
+    min-height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--button-surface);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.global-auth-actions button[type="submit"] {
+    border-color: var(--accent-dark);
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+}
+
+#global-auth-out {
+    min-height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--button-surface);
+    color: var(--ink);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 900;
+}

@@ -1,0 +1,22 @@
+<section class="player-bar" aria-label="Playback controls">
+            <div class="playback-controls">
+                <button class="icon-btn play-btn" id="play-btn" type="button" title="Play">Play</button>
+                <button class="icon-btn pause-btn" id="pause-btn" type="button" title="Pause" aria-label="Pause">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="7" y="5" width="3.5" height="14" rx="1"></rect>
+                        <rect x="13.5" y="5" width="3.5" height="14" rx="1"></rect>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="stop-btn" type="button" title="Stop">Stop</button>
+                <label class="tiny-field">BPM <input id="play-bpm" type="number" min="30" max="240" step="1"></label>
+                <button class="icon-btn reset-icon" id="reset-bpm" type="button" title="Reset BPM and transpose" aria-label="Reset BPM and transpose">&#8634;</button>
+                <label class="tiny-field">Count <input id="beats-per-bar" type="number" min="1" max="12" step="1"></label>
+                <label class="tiny-field">Transpose <input id="transpose" type="number" min="-12" max="12" step="1"></label>
+                <span class="beat-lamp" id="beat-lamp" aria-hidden="true"></span>
+            </div>
+            <div class="random-chord-controls">
+                <label class="tiny-field">Every bars <input id="random-bars" type="number" min="1" max="16" value="4"></label>
+                <button class="panel-btn" id="random-now" type="button">Generate chord</button>
+                <span id="random-output" class="random-output">G</span>
+            </div>
+        </section>

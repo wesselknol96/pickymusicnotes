@@ -36,6 +36,10 @@
     --good-rgb: 47, 122, 66;
 }
 
+html {
+    font-size: 12px;
+}
+
 body {
     height: 100vh;
     overflow: hidden;

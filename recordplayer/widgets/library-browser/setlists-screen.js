@@ -86,6 +86,8 @@ function renderSetlistsScreen(list, setlists) {
             if (song) block.appendChild(renderSetlistSongRow(setlist, song, index));
         });
 
+        block.appendChild(renderSetlistAddRow(setlist));
+
         list.appendChild(block);
     });
 }
@@ -113,7 +115,6 @@ function renderSetlistSongRow(setlist, song, index) {
     const row = document.createElement('div');
     row.className = `library-setlist-song song-list-row library-version-row${song.id === state.activeSongId ? ' active' : ''}`;
 
-    const before = createSetlistInsertButton(setlist, index, 'before');
     const main = document.createElement('button');
     main.className = 'song-list-item library-version-main';
     main.type = 'button';
@@ -135,15 +136,21 @@ function renderSetlistSongRow(setlist, song, index) {
         saveSetlists();
         renderLibraryBrowser();
     });
-    const after = createSetlistInsertButton(setlist, index + 1, 'after');
 
-    row.append(main, score, before, remove, after);
+    row.append(main, score, remove);
     return row;
 }
 
-function createSetlistInsertButton(setlist, index, placement = 'after') {
+function renderSetlistAddRow(setlist) {
+    const row = document.createElement('div');
+    row.className = 'library-setlist-add-row';
+    row.appendChild(createSetlistInsertButton(setlist, setlist.songIds.length));
+    return row;
+}
+
+function createSetlistInsertButton(setlist, index) {
     const button = document.createElement('button');
-    button.className = `library-mini-plus library-mini-plus-${placement}`;
+    button.className = 'library-mini-plus library-setlist-add-song';
     button.type = 'button';
     button.textContent = '+';
     button.title = 'Add active song here';

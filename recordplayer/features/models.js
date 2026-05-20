@@ -8,7 +8,8 @@
         beatsPerBar: 4,
         countdown: 0,
         capo: 0,
-        playable: true,
+        playable: false,
+        isOnline: false,
         randomPlayback: false,
         transpose: 0,
         sections: [section]
@@ -109,6 +110,9 @@ function normalizeSong(song) {
     song.artist = song.artist || 'Artist';
     song.capo = clamp(Number(song.capo) || 0, -12, 12);
     song.countdown = normalizeCountdown(song.countdown);
+    if (typeof song.playable !== 'boolean') song.playable = false;
+    if (typeof song.isOnline !== 'boolean') song.isOnline = false;
+    if (typeof song.randomPlayback !== 'boolean') song.randomPlayback = false;
     song.sections.forEach(section => {
         const legacyTabsSection = section.type === 'tabs';
         if (legacyTabsSection) section.type = 'verse';

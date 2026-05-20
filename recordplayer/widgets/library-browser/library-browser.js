@@ -28,12 +28,19 @@ function setupLibraryBrowserEvents() {
 }
 
 function beginLibraryEditMode() {
+    if (state.editMode) {
+        state.editMode = false;
+        state.editSnapshot = null;
+        state.activeSubsectionId = null;
+        saveSongs();
+        notifyEditMode?.();
+    }
     state.libraryEditSnapshot = JSON.stringify({
         songs: state.songs,
         setlists: state.setlists
     });
     state.libraryEditMode = true;
-    renderLibraryBrowser();
+    render();
 }
 
 function saveLibraryEditMode() {
@@ -41,7 +48,7 @@ function saveLibraryEditMode() {
     state.libraryEditSnapshot = null;
     saveSetlists();
     saveSongs();
-    renderLibraryBrowser();
+    render();
 }
 
 function cancelLibraryEditMode() {
@@ -91,6 +98,7 @@ function renderLibraryBrowser() {
     if (editButton) {
         editButton.classList.toggle('active', state.libraryEditMode);
         editButton.setAttribute('aria-pressed', state.libraryEditMode ? 'true' : 'false');
+        editButton.disabled = state.editMode;
         editButton.hidden = state.libraryEditMode;
     }
     const saveEditButton = document.getElementById('library-save-edit');
@@ -162,7 +170,7 @@ function createLibraryRemoveButton(label, onClick) {
     remove.title = label;
     remove.setAttribute('aria-label', label);
     remove.disabled = state.songSource !== 'local';
-    remove.textContent = 'x';
+    remove.textContent = '\u2715';
     remove.addEventListener('click', event => {
         event.stopPropagation();
         onClick();

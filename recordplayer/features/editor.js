@@ -1,5 +1,5 @@
 ﻿function toggleEditMode() {
-    if (state.locked) return;
+    if (state.locked || state.libraryEditMode) return;
 
     if (state.editMode) {
         state.editMode = false;
@@ -124,7 +124,7 @@ async function toggleOnlineAvailability(event) {
 }
 
 function openDeleteSongPopup(songId) {
-    if (!state.editMode) return;
+    if (!state.editMode && !state.libraryEditMode) return;
 
     const song = state.songs.find(item => item.id === songId);
     if (!song) return;
@@ -149,7 +149,7 @@ async function confirmDeleteSong() {
 }
 
 async function deleteSong(songId) {
-    if (!state.editMode) return;
+    if (!state.editMode && !state.libraryEditMode) return;
 
     const songIndex = state.songs.findIndex(song => song.id === songId);
     if (songIndex < 0) return;
@@ -162,7 +162,7 @@ async function deleteSong(songId) {
     state.activeSongId = nextSong?.id || null;
     state.activeSectionId = nextSong?.sections[0]?.id || null;
     state.activeSubsectionId = nextSong?.sections[0]?.subsections[0]?.id || null;
-    state.editSnapshot = JSON.stringify(state.songs);
+    if (state.editMode) state.editSnapshot = JSON.stringify(state.songs);
 
     stopSong();
     if (removedSong.isOnline) {

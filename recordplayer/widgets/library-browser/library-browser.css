@@ -81,7 +81,7 @@
     grid-template-columns: repeat(2, calc(var(--tile) * 1.55));
     justify-content: center;
     justify-self: center;
-    gap: calc(var(--tile) * 0.2);
+    gap: calc(var(--tile) * 0.7);
 }
 
 .library-edit-actions .library-edit-btn {
@@ -99,6 +99,7 @@
 
 .library-edit-actions .library-cancel-edit {
     color: var(--danger);
+    font-size: 1.22rem;
 }
 
 .library-mini-plus:disabled {
@@ -344,18 +345,41 @@
     bottom: auto;
     top: 50%;
     left: auto;
-    width: calc(var(--tile) * 1.08);
-    height: calc(var(--tile) * 1.08);
+    width: calc(var(--tile) * 0.82);
+    height: calc(var(--tile) * 0.82);
+    border-color: rgba(var(--danger-rgb), 0.62);
+    background: rgba(var(--danger-rgb), 0.18);
+    color: var(--danger);
     transform: translateY(-50%);
+    font-size: 0.68rem;
+    line-height: 1;
+}
+
+.library-browser .delete-song-btn:hover,
+.library-browser .delete-song-btn:focus-visible {
+    border-color: rgba(var(--danger-rgb), 0.76);
+    background: rgba(var(--danger-rgb), 0.25);
+    color: var(--danger);
 }
 
 .library-browser .delete-song-btn,
 .library-mini-plus {
     display: none;
+    place-items: center;
 }
 
 .library-browser.library-editing .delete-song-btn,
 .library-browser.library-editing .library-mini-plus {
+    display: grid;
+}
+
+.songwriter-app.editing .library-browser .delete-song-btn,
+.songwriter-app.editing .library-browser .library-mini-plus {
+    display: none;
+}
+
+.songwriter-app.editing .library-browser.library-editing .delete-song-btn,
+.songwriter-app.editing .library-browser.library-editing .library-mini-plus {
     display: grid;
 }
 
@@ -392,9 +416,13 @@
     justify-self: end;
 }
 
+.library-browser.library-editing .library-setlist-heading {
+    padding-right: calc(var(--tile) * 1.55);
+}
+
 .library-browser.library-editing .library-version-row,
 .library-browser.library-editing .library-setlist-song {
-    grid-template-columns: minmax(0, 1fr) auto calc(var(--tile) * 1.15) calc(var(--tile) * 1.15) calc(var(--tile) * 1.15);
+    grid-template-columns: minmax(0, 1fr) auto calc(var(--tile) * 1.35);
 }
 
 .library-browser.library-editing .library-version-main,
@@ -407,34 +435,35 @@
     grid-column: 2;
 }
 
-.library-browser.library-editing .delete-song-btn,
 .library-browser.library-editing .library-mini-plus {
     position: static;
     align-self: center;
-    justify-self: end;
+    justify-self: center;
     transform: none;
 }
 
-.library-browser.library-editing .library-version-row .delete-song-btn {
-    grid-column: 5;
-}
-
+.library-browser.library-editing .library-version-row .delete-song-btn,
 .library-browser.library-editing .library-setlist-song .delete-song-btn {
-    grid-column: 4;
-}
-
-.library-browser.library-editing .library-mini-plus-before {
     grid-column: 3;
+    position: static;
+    align-self: center;
+    justify-self: center;
+    transform: none;
 }
 
-.library-browser.library-editing .library-mini-plus-after {
-    grid-column: 5;
+.library-setlist-add-row {
+    display: none;
+    justify-content: center;
+    padding: calc(var(--tile) * 0.18) 0 calc(var(--tile) * 0.12);
+}
+
+.library-browser.library-editing .library-setlist-add-row {
+    display: grid;
 }
 
 .setlist-name-input {
     width: 100%;
     border: 0;
-    border-bottom: 1px solid rgba(var(--accent-dark-rgb), 0.42);
     background: transparent;
 }
 

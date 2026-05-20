@@ -8,7 +8,7 @@
       "beatsPerBar": 4,
       "countdown": 0,
       "capo": 0,
-      "playable": true,
+      "playable": false,
       "randomPlayback": false,
       "transpose": 0,
       "sections": [
@@ -376,9 +376,9 @@
       "beatsPerBar": 3,
       "countdown": 0,
       "capo": 0,
-      "playable": true,
+      "playable": false,
       "randomPlayback": false,
-      "transpose": 0,
+      "transpose": 1,
       "sections": [
         {
           "id": "section-1779272692793-5e7aca406d925",
@@ -1504,7 +1504,7 @@
       "title": "You Whisper Quietly",
       "artist": "Wessel Knol",
       "isOnline": true,
-      "playable": true,
+      "playable": false,
       "sections": [
         {
           "id": "section-1778529951780-d155889474c3d",
@@ -1956,7 +1956,7 @@
           ]
         }
       ],
-      "transpose": 12,
+      "transpose": 0,
       "beatsPerBar": 4,
       "randomPlayback": false,
       "ownerId": "b9887e65-a103-4491-a76b-40f0d6646624",

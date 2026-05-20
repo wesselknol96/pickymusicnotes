@@ -68,7 +68,12 @@
         const song = activeSong();
         if (!song) return;
         song.playable = event.target.checked;
+        if (!song.playable) {
+            state.showDetailedDurationsDisplay = false;
+            saveUiSettings();
+        }
         saveSongs();
+        render();
     });
     document.getElementById('random-playback')?.addEventListener('change', event => {
         const song = activeSong();
@@ -78,11 +83,16 @@
     });
     document.getElementById('online-available').addEventListener('change', toggleOnlineAvailability);
     document.getElementById('show-detailed-durations-edit').addEventListener('change', event => {
+        state.hasSetDetailedDurationsEdit = true;
         state.showDetailedDurationsEdit = event.target.checked;
         saveUiSettings();
         render();
     });
     document.getElementById('show-detailed-durations-display').addEventListener('change', event => {
+        state.hasSetDetailedDurationsDisplay = true;
+        if (isPlaybackDisabled(activeSong())) {
+            event.target.checked = false;
+        }
         state.showDetailedDurationsDisplay = event.target.checked;
         saveUiSettings();
         render();

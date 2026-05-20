@@ -79,10 +79,15 @@ async function refreshSongsForAuthChange() {
 async function switchSongSource(source) {
     if (!['local', 'cloud'].includes(source) || source === state.songSource) return;
 
+    const requestId = ++state.songSourceRequestId;
     state.songSource = source;
     state.editMode = false;
-    state.songs = await loadSongs();
+    renderAuth();
+    const songs = await loadSongs();
+    if (requestId !== state.songSourceRequestId || source !== state.songSource) return;
+    state.songs = songs;
     await loadLibraryRatings?.();
+    if (requestId !== state.songSourceRequestId || source !== state.songSource) return;
     state.activeSongId = state.songs[0]?.id || null;
     state.activeSectionId = activeSong()?.sections[0]?.id || null;
     state.activeSubsectionId = activeSong()?.sections[0]?.subsections[0]?.id || null;

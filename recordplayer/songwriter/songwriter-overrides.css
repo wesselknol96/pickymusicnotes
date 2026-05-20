@@ -334,11 +334,11 @@
 }
 
 .edit-side-menu .edit-mode-actions .icon-btn {
-    width: calc(var(--tile) * 2.95);
-    min-width: calc(var(--tile) * 2.95);
-    max-width: calc(var(--tile) * 2.95);
-    height: calc(var(--tile) * 2.95);
-    min-height: calc(var(--tile) * 2.95);
+    width: calc(var(--tile) * 1.97);
+    min-width: calc(var(--tile) * 1.97);
+    max-width: calc(var(--tile) * 1.97);
+    height: calc(var(--tile) * 1.97);
+    min-height: calc(var(--tile) * 1.97);
     border-radius: 50%;
     padding: 0;
     aspect-ratio: 1;

@@ -1,5 +1,6 @@
 ﻿function render() {
     const app = document.getElementById('songwriter-app');
+    if (isPlaybackDisabled(activeSong())) state.showDetailedDurationsDisplay = false;
     app.classList.toggle('editing', state.editMode);
     app.classList.toggle('locked', state.locked);
     app.classList.toggle('compact', state.compact);
@@ -16,12 +17,12 @@
     const editable = canEditActiveSong();
     editButton.classList.toggle('active', state.editMode);
     editButton.setAttribute('aria-pressed', state.editMode ? 'true' : 'false');
-    editButton.disabled = state.locked || (!editable && !state.editMode);
+    editButton.disabled = state.locked || state.libraryEditMode || (!editable && !state.editMode);
     editButton.textContent = state.editMode ? '\u2713' : '\u270e';
     editButton.setAttribute('aria-label', state.editMode ? 'Save edit' : 'Edit song');
     editButton.title = state.locked
         ? 'Unlock to edit'
-        : (editable ? (state.editMode ? 'Save song' : 'Edit song') : 'Only the owner can edit this cloud song');
+        : (state.libraryEditMode ? 'Save or cancel library edits first' : (editable ? (state.editMode ? 'Save song' : 'Edit song') : 'Only the owner can edit this cloud song'));
     document.getElementById('cancel-edit').hidden = !state.editMode;
     document.getElementById('random-toggle')?.classList.toggle('active', !document.querySelector('.random-chord-controls')?.hidden);
     document.getElementById('export-song').disabled = !state.editMode || !activeSong();
@@ -70,7 +71,7 @@ function renderEditor() {
     document.getElementById('show-detailed-durations-edit').checked = state.showDetailedDurationsEdit;
     const displayDurationToggle = document.getElementById('show-detailed-durations-display');
     displayDurationToggle.checked = state.showDetailedDurationsDisplay;
-    displayDurationToggle.disabled = state.editMode;
+    displayDurationToggle.disabled = state.editMode || isPlaybackDisabled(song);
     const displaySectionTitlesToggle = document.getElementById('show-section-titles-display');
     displaySectionTitlesToggle.checked = state.showSectionTitlesDisplay;
     displaySectionTitlesToggle.disabled = state.editMode;

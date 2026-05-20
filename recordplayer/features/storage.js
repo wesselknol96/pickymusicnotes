@@ -42,10 +42,16 @@ function loadUiSettings() {
 
     try {
         const parsed = JSON.parse(stored);
-        if (typeof parsed.showDetailedDurationsEdit === 'boolean') {
+        if (typeof parsed.hasSetDetailedDurationsEdit === 'boolean') {
+            state.hasSetDetailedDurationsEdit = parsed.hasSetDetailedDurationsEdit;
+        }
+        if (typeof parsed.hasSetDetailedDurationsDisplay === 'boolean') {
+            state.hasSetDetailedDurationsDisplay = parsed.hasSetDetailedDurationsDisplay;
+        }
+        if (state.hasSetDetailedDurationsEdit && typeof parsed.showDetailedDurationsEdit === 'boolean') {
             state.showDetailedDurationsEdit = parsed.showDetailedDurationsEdit;
         }
-        if (typeof parsed.showDetailedDurationsDisplay === 'boolean') {
+        if (state.hasSetDetailedDurationsDisplay && typeof parsed.showDetailedDurationsDisplay === 'boolean') {
             state.showDetailedDurationsDisplay = parsed.showDetailedDurationsDisplay;
         }
         if (typeof parsed.showSectionTitlesDisplay === 'boolean') {
@@ -72,7 +78,9 @@ function saveUiSettings() {
         showSectionTitlesDisplay: state.showSectionTitlesDisplay,
         showRepetitionsEdit: state.showRepetitionsEdit,
         showRepetitionsDisplay: state.showRepetitionsDisplay,
-        showChordTabsEdit: state.showChordTabsEdit
+        showChordTabsEdit: state.showChordTabsEdit,
+        hasSetDetailedDurationsEdit: state.hasSetDetailedDurationsEdit,
+        hasSetDetailedDurationsDisplay: state.hasSetDetailedDurationsDisplay
     }));
 }
 

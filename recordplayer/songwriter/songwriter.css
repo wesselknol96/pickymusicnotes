@@ -1652,6 +1652,18 @@ body {
     opacity: 0.36;
 }
 
+.songwriter-app.playback-disabled .playback-controls > .display-options {
+    opacity: 1;
+}
+
+.songwriter-app.playback-disabled .display-options .display-detail-toggle {
+    opacity: 1;
+}
+
+.songwriter-app.playback-disabled .display-options .main-duration-toggle {
+    opacity: 0.36;
+}
+
 .songwriter-app.playback-disabled .menu-number-transpose,
 .songwriter-app.playback-disabled .menu-number-transpose .number-wheel,
 .songwriter-app.playback-disabled .menu-number-transpose .inline-reset {

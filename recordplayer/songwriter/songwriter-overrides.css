@@ -916,6 +916,17 @@
         calc(var(--tile) * 0.95);
 }
 
+.songwriter-app .song-workspace,
+.songwriter-app.editing .song-workspace {
+    --recordplayer-library-browser-width: calc(var(--tile) * 21.6);
+    grid-template-columns: minmax(0, 1fr) calc(var(--tile) * 6.75) var(--recordplayer-library-browser-width);
+}
+
+.songwriter-app.locked .song-workspace {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+
 .songwriter-app.editing.hide-edit-detailed-durations .lyric-duration-wheel {
     display: none;
 }

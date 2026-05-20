@@ -12,9 +12,20 @@ create table if not exists public.songs (
     title text not null default 'Untitled Song',
     artist text not null default 'Artist',
     payload jsonb not null,
-    is_online boolean not null default true,
+    is_online boolean not null default false,
     created_at timestamptz not null default now(),
     updated_at timestamptz not null default now()
+);
+
+create table if not exists public.library_ratings (
+    item_type text not null check (item_type in ('song', 'setlist')),
+    item_id text not null,
+    user_id uuid not null references auth.users(id) on delete cascade,
+    user_name text not null,
+    rating integer not null check (rating between 1 and 8),
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now(),
+    primary key (item_type, item_id, user_id)
 );
 
 do $$
@@ -36,11 +47,15 @@ end $$;
 
 alter table public.profiles enable row level security;
 alter table public.songs enable row level security;
+alter table public.library_ratings enable row level security;
+alter table public.songs alter column is_online set default false;
 
 grant usage on schema public to anon, authenticated;
 grant select on public.songs to anon;
+grant select on public.library_ratings to anon;
 grant select, insert, update on public.profiles to authenticated;
 grant select, insert, update, delete on public.songs to authenticated;
+grant select, insert, update, delete on public.library_ratings to authenticated;
 
 create or replace function public.is_song_admin()
 returns boolean
@@ -103,14 +118,17 @@ drop policy if exists "Owners can create songs" on public.songs;
 create policy "Owners can create songs"
 on public.songs for insert
 to authenticated
-with check ((select auth.uid()) = owner_id);
+with check ((select auth.uid()) = owner_id and (is_online = false or public.is_song_admin()));
 
 drop policy if exists "Owners and admins can update songs" on public.songs;
 create policy "Owners and admins can update songs"
 on public.songs for update
 to authenticated
 using ((select auth.uid()) = owner_id or public.is_song_admin())
-with check ((select auth.uid()) = owner_id or public.is_song_admin());
+with check (
+    ((select auth.uid()) = owner_id or public.is_song_admin())
+    and (is_online = false or public.is_song_admin())
+);
 
 drop policy if exists "Owners and admins can delete songs" on public.songs;
 create policy "Owners and admins can delete songs"
@@ -118,8 +136,34 @@ on public.songs for delete
 to authenticated
 using ((select auth.uid()) = owner_id or public.is_song_admin());
 
+drop policy if exists "Anyone can read library ratings" on public.library_ratings;
+create policy "Anyone can read library ratings"
+on public.library_ratings for select
+to anon, authenticated
+using (true);
+
+drop policy if exists "Users create their own library rating" on public.library_ratings;
+create policy "Users create their own library rating"
+on public.library_ratings for insert
+to authenticated
+with check ((select auth.uid()) = user_id);
+
+drop policy if exists "Users update their own library rating" on public.library_ratings;
+create policy "Users update their own library rating"
+on public.library_ratings for update
+to authenticated
+using ((select auth.uid()) = user_id)
+with check ((select auth.uid()) = user_id);
+
+drop policy if exists "Users delete their own library rating" on public.library_ratings;
+create policy "Users delete their own library rating"
+on public.library_ratings for delete
+to authenticated
+using ((select auth.uid()) = user_id);
+
 create index if not exists songs_owner_id_idx on public.songs(owner_id);
 create index if not exists songs_is_online_updated_at_idx on public.songs(is_online, updated_at desc);
+create index if not exists library_ratings_item_idx on public.library_ratings(item_type, item_id);
 
 grant execute on function public.is_song_admin() to authenticated;
 grant execute on function public.delete_own_account() to authenticated;

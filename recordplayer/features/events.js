@@ -26,7 +26,6 @@
     document.getElementById('section-menu').addEventListener('pointerleave', scheduleSectionMenuClose);
     document.getElementById('section-menu').addEventListener('pointerenter', cancelSectionMenuClose);
     document.getElementById('random-toggle')?.addEventListener('click', toggleRandomizer);
-    document.getElementById('new-song').addEventListener('click', addSong);
     document.getElementById('export-song').addEventListener('click', exportActiveSongFormat);
     document.getElementById('import-song').addEventListener('click', openSongImportPicker);
     document.getElementById('import-song-file').addEventListener('change', importSongFormatFromFile);
@@ -37,11 +36,12 @@
     });
     document.getElementById('song-search').addEventListener('input', event => {
         state.search = event.target.value;
-        renderSongList();
+        renderLibraryBrowser();
     });
     document.querySelectorAll('.song-source-tab').forEach(button => {
         button.addEventListener('click', () => switchSongSource(button.dataset.source));
     });
+    setupLibraryBrowserEvents();
 
     document.getElementById('play-btn').addEventListener('click', playSong);
     document.getElementById('pause-btn').addEventListener('click', pauseSong);

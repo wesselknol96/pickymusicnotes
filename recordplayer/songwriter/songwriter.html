@@ -114,13 +114,27 @@
                 </div>
                 <input id="import-song-file" type="file" accept=".json,.picky-song.json,application/json" hidden>
             </aside>
-            <aside class="song-list-panel">
-                <input class="song-search" id="song-search" type="search" placeholder="Search songs">
-                <div class="song-source-tabs" aria-label="Song source">
-                    <button class="song-source-tab active" data-source="local" type="button">cached songs</button>
-                    <button class="song-source-tab" data-source="cloud" type="button">songs</button>
+            <aside class="song-list-panel library-browser" id="library-browser">
+                <div class="song-source-tabs library-source-tabs" aria-label="Song source">
+                    <button class="song-source-tab library-pill active" data-source="local" type="button">Private</button>
+                    <button class="song-source-tab library-pill" data-source="cloud" type="button">Public</button>
                 </div>
-                <button class="panel-btn new-song-btn" id="new-song" type="button">New song</button>
+                <div class="library-mode-row" aria-label="Library screens">
+                    <button class="library-screen-pill active" id="new-song" data-library-screen="songs" type="button" title="New song">
+                        <span class="library-pill-plus">+</span>
+                        <span>Songs</span>
+                    </button>
+                    <div class="library-edit-actions" aria-label="Library edit actions">
+                        <button class="library-edit-btn" id="library-edit-toggle" type="button" title="Edit library list" aria-pressed="false" aria-label="Edit library list">&#9998;</button>
+                        <button class="library-edit-btn library-save-edit" id="library-save-edit" type="button" title="Save library edits" hidden aria-label="Save library edits">&#10003;</button>
+                        <button class="library-edit-btn cancel-edit-btn library-cancel-edit" id="library-cancel-edit" type="button" title="Cancel library edits" hidden aria-label="Cancel library edits">&#215;</button>
+                    </div>
+                    <button class="library-screen-pill" id="new-setlist" data-library-screen="setlists" type="button" title="New setlist">
+                        <span class="library-pill-plus">+</span>
+                        <span>Setlists</span>
+                    </button>
+                </div>
+                <input class="song-search" id="song-search" type="search" placeholder="search songs">
                 <div class="song-list" id="song-list"></div>
             </aside>
 
@@ -181,6 +195,9 @@
     <script src="../features/cloud.js"></script>
     <script src="../features/storage.js"></script>
     <script src="../features/format.js"></script>
+    <script src="../widgets/library-browser/songs-screen.js"></script>
+    <script src="../widgets/library-browser/setlists-screen.js"></script>
+    <script src="../widgets/library-browser/library-browser.js"></script>
     <script src="../widgets/player/beat-lightning.js"></script>
     <script src="../features/events.js"></script>
     <script src="../features/rendering.js"></script>

@@ -1,5 +1,6 @@
 ﻿const STORAGE_KEY = 'picky-songwriter-songs-v1';
 const UI_SETTINGS_KEY = 'picky-songwriter-ui-settings-v1';
+const SETLISTS_STORAGE_KEY = 'picky-songwriter-setlists-v1';
 const CLOUD_CACHE_KEY = 'picky-songwriter-cloud-cache-v2';
 const LOCAL_ONLINE_IDS_KEY = 'picky-songwriter-online-song-ids-v1';
 const SECTION_TYPES = ['intro', 'verse', 'pre-chorus', 'chorus', 'bridge', 'solo', 'interlude', 'instrumental', 'tag', 'odd', 'outro'];
@@ -40,7 +41,10 @@ const TAB_FRET_OPTIONS = [
 const state = {
     songs: [],
     activeSongId: null,
+    setlists: [],
     songSource: 'local',
+    libraryScreen: 'songs',
+    libraryEditMode: false,
     editMode: false,
     locked: false,
     compact: false,
@@ -50,6 +54,9 @@ const state = {
     showRepetitionsEdit: true,
     showRepetitionsDisplay: true,
     showChordTabsEdit: false,
+    showLibraryAuthors: true,
+    showLibraryRatings: true,
+    showLibraryStructure: true,
     search: '',
     chordLibrary: null,
     draggedSectionId: null,
@@ -94,6 +101,8 @@ async function initializeSongwriter() {
     state.chordLibrary = await loadRecordChordLibrary();
     await window.ChordTooltip?.ready;
     state.songs = await loadSongs();
+    state.setlists = loadSetlists();
+    await loadLibraryRatings?.();
     state.activeSongId = state.songs[0]?.id || null;
     state.activeSectionId = activeSong()?.sections[0]?.id || null;
     state.activeSubsectionId = activeSong()?.sections[0]?.subsections[0]?.id || null;

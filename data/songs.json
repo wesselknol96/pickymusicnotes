@@ -1,6 +1,466 @@
 {
   "songs": [
     {
+      "id": "song-1779275140709-aaefafb3ee9be",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275140709-ae1f4206083cb8",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275140709-12254a47aed398",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275140709-bd38d7dd437028",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275139238-53822ad2f51a38",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275139238-60853dc40984e8",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275139238-e9ebd84ef20d3",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275139238-647e924ffbf9d8",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275139065-ad6f56ef699bf8",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275139065-e8ea5adb1e485",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275139065-6395ed18099438",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275139065-b9af3992600ff8",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275138876-e0966a0fc2301",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275138876-f90acac610bdf",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275138876-846362ae6890c",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275138876-20959c70d2ce2",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275138722-1c662148a5d908",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275138722-0156756971136",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275138722-8c6f2dfef23d58",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275138722-417f4f98c2d8",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275138552-268d7d3aac451",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275138552-9a89128de5d288",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275138552-90bb2eefeccd5",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275138552-ce55594ae59d2",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275138408-3dd8d893daf228",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275138408-25194cbc780668",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275138408-22554b6c2a44c",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275138408-e1327c11706988",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779275137990-39bacc263590d8",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779275137990-e5566c6571863",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779275137990-2a1d314cac55c",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779275137990-beaee473bdf98",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779272692793-4a78fff577fb88",
+      "title": "You Whisper Quietly",
+      "artist": "Wessel Knol",
+      "bpm": 96,
+      "beatsPerBar": 3,
+      "countdown": 0,
+      "capo": 0,
+      "playable": true,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779272692793-5e7aca406d925",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779272692793-980a16591434f",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779272692793-d73d88c5f7328",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
+      "id": "song-1779272616292-4db8ffabc7da1",
+      "title": "Untitled Song",
+      "artist": "Artist",
+      "bpm": 96,
+      "beatsPerBar": 4,
+      "countdown": 0,
+      "capo": 0,
+      "playable": false,
+      "randomPlayback": false,
+      "transpose": 0,
+      "sections": [
+        {
+          "id": "section-1779272616292-e134bdf790d48",
+          "type": "verse",
+          "title": "Verse",
+          "comment": "",
+          "bars": 4,
+          "subsections": [
+            {
+              "id": "subsection-1779272616291-23f280fecfece8",
+              "type": "chords",
+              "chords": [
+                {
+                  "id": "chord-1779272616292-014fc11a2dae7",
+                  "name": "G",
+                  "bars": 1
+                }
+              ],
+              "lyrics": "",
+              "lyricLineDurations": [
+                1
+              ],
+              "tabRepetitions": 1,
+              "chordLineRepetitions": [
+                1
+              ],
+              "lyricLineRepetitions": [
+                1
+              ]
+            }
+          ]
+        }
+      ],
+      "isOnline": false
+    },
+    {
       "id": "song-1779124862690-2a5d664829e5a",
       "title": "Untitled Song",
       "artist": "Artist",
@@ -1043,7 +1503,7 @@
       "bpm": 98,
       "title": "You Whisper Quietly",
       "artist": "Wessel Knol",
-      "isOnline": false,
+      "isOnline": true,
       "playable": true,
       "sections": [
         {
@@ -1156,12 +1616,12 @@
               "chordLineRepetitions": [
                 4,
                 4,
-                4
+                1
               ],
               "lyricLineRepetitions": [
-                7,
-                6,
-                4
+                1,
+                1,
+                1
               ],
               "lyricLineDurations": [
                 0.03125,
@@ -1397,7 +1857,7 @@
                 1
               ],
               "lyricLineRepetitions": [
-                3,
+                6,
                 4,
                 1,
                 1,

@@ -3,6 +3,7 @@
 @import url('../widgets/toolbar/toolbar.css');
 @import url('../widgets/player/player.css');
 @import url('../widgets/storage/song-list.css');
+@import url('../widgets/library-browser/library-browser.css');
 @import url('../widgets/rendering/editor.css');
 @import url('../widgets/chord-tooltip/chord-tooltip.css');
 @import url('../tools/number-wheel/number-wheel.css');
@@ -387,6 +388,11 @@ body {
 .song-toolbar .icon-btn:disabled,
 .new-song-btn:disabled,
 .format-actions .panel-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.42;
+}
+
+.playable-toggle.admin-only-disabled {
     cursor: not-allowed;
     opacity: 0.42;
 }
@@ -806,6 +812,20 @@ body {
     right: calc(var(--tile) * -0.13);
     bottom: calc(var(--tile) * 0.08);
     transform: translateX(-3px);
+}
+
+.library-browser .delete-song-btn,
+.library-browser .library-mini-plus {
+    display: none;
+}
+
+.library-browser.library-editing .delete-song-btn,
+.library-browser.library-editing .library-mini-plus {
+    display: grid;
+}
+
+.songwriter-app.editing .library-browser:not(.library-editing) .delete-song-btn {
+    display: none;
 }
 
 .songwriter-app.editing .chord-line {

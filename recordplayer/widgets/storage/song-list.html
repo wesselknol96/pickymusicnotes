@@ -1,5 +1,24 @@
-﻿<aside class="song-list-panel">
-                <input class="song-search" id="song-search" type="search" placeholder="Search songs">
-                <button class="panel-btn new-song-btn" id="new-song" type="button">New song</button>
-                <div class="song-list" id="song-list"></div>
-            </aside>
+<aside class="song-list-panel library-browser" id="library-browser">
+    <div class="song-source-tabs library-source-tabs" aria-label="Song source">
+        <button class="song-source-tab library-pill active" data-source="local" type="button">Private</button>
+        <button class="song-source-tab library-pill" data-source="cloud" type="button">Public</button>
+    </div>
+    <div class="library-mode-row" aria-label="Library screens">
+        <button class="library-screen-pill active" id="new-song" data-library-screen="songs" type="button" title="New song">
+            <span class="library-pill-plus">+</span>
+            <span>Songs</span>
+        </button>
+        <button class="library-edit-btn" id="library-edit-toggle" type="button" title="Edit library list" aria-pressed="false" aria-label="Edit library list">&#9998;</button>
+        <button class="library-screen-pill" id="new-setlist" data-library-screen="setlists" type="button" title="New setlist">
+            <span class="library-pill-plus">+</span>
+            <span>Setlists</span>
+        </button>
+    </div>
+    <input class="song-search" id="song-search" type="search" placeholder="search songs">
+    <div class="song-list" id="song-list"></div>
+    <div class="library-display-options" aria-label="Library display options">
+        <label class="library-check"><input id="show-library-authors" type="checkbox" checked><span>Show Authors</span></label>
+        <label class="library-check"><input id="show-library-ratings" type="checkbox" checked><span>Show Ratings</span></label>
+        <label class="library-check"><input id="show-library-structure" type="checkbox" checked><span>Show Sections</span></label>
+    </div>
+</aside>

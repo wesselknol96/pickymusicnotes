@@ -68,6 +68,7 @@ async function ensureProfile() {
 async function refreshSongsForAuthChange() {
     renderAuth();
     state.songs = await loadSongs();
+    await loadLibraryRatings?.();
     state.activeSongId = state.songs[0]?.id || null;
     state.activeSectionId = activeSong()?.sections[0]?.id || null;
     state.activeSubsectionId = activeSong()?.sections[0]?.subsections[0]?.id || null;
@@ -81,6 +82,7 @@ async function switchSongSource(source) {
     state.songSource = source;
     state.editMode = false;
     state.songs = await loadSongs();
+    await loadLibraryRatings?.();
     state.activeSongId = state.songs[0]?.id || null;
     state.activeSectionId = activeSong()?.sections[0]?.id || null;
     state.activeSubsectionId = activeSong()?.sections[0]?.subsections[0]?.id || null;
@@ -157,7 +159,7 @@ async function persistCloudSongWithVisibility(song, online) {
     if (!song || !canEditSong(song)) return;
 
     applyCloudOwner(song);
-    song.isOnline = Boolean(online);
+    song.isOnline = Boolean(online && canPublishOnline());
     const payload = stripCloudMetadata(song, song.isOnline);
     const { error } = await state.auth.client
         .from(CLOUD_SONGS_TABLE)
@@ -184,6 +186,16 @@ async function persistCloudSongWithVisibility(song, online) {
 }
 
 async function setCloudSongOnline(song, online) {
+    if (online && !canPublishOnline()) {
+        if (song) song.isOnline = false;
+        markLocalSongOnline(song?.id, false);
+        state.auth.message = state.auth.user
+            ? 'Alleen de beheerder kan songs online zetten.'
+            : 'Log in om songs online te zetten.';
+        renderAuth();
+        return false;
+    }
+
     return persistCloudSongWithVisibility(song, online);
 }
 
@@ -248,6 +260,10 @@ function isSongAdmin() {
     return Boolean(state.auth.profile?.is_admin);
 }
 
+function canPublishOnline() {
+    return Boolean(state.auth.user && isSongAdmin());
+}
+
 function displayName() {
     return state.auth.profile?.display_name || state.auth.user?.user_metadata?.display_name || state.auth.user?.email || 'Songwriter';
 }
@@ -255,10 +271,10 @@ function displayName() {
 function renderAuth() {
     document.querySelectorAll('.song-source-tab').forEach(button => {
         if (button.dataset.source === 'local') {
-            button.textContent = 'personal songs';
+            button.textContent = 'Private';
         }
         if (button.dataset.source === 'cloud') {
-            button.textContent = 'songs';
+            button.textContent = 'Public';
         }
         button.classList.toggle('active', button.dataset.source === state.songSource);
     });

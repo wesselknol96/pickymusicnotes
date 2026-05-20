@@ -86,6 +86,7 @@ async function addSong() {
     state.songs.unshift(song);
     state.activeSongId = song.id;
     state.activeSectionId = song.sections[0].id;
+    state.libraryScreen = 'songs';
     saveSongs();
     render();
 }
@@ -93,6 +94,18 @@ async function addSong() {
 async function toggleOnlineAvailability(event) {
     const song = activeSong();
     if (!song || state.songSource !== 'local') return;
+
+    if (event.target.checked && !canPublishOnline()) {
+        song.isOnline = false;
+        event.target.checked = false;
+        markLocalSongOnline(song.id, false);
+        state.auth.message = state.auth.user
+            ? 'Alleen de beheerder kan songs online zetten.'
+            : 'Log in om deze song online beschikbaar te maken.';
+        renderAuth();
+        if (!state.auth.user) openAuthPopup();
+        return;
+    }
 
     if (event.target.checked && !state.auth.user) {
         song.isOnline = false;
@@ -423,9 +436,15 @@ function syncControlAvailability(song = activeSong()) {
     ['playable-toggle', 'song-bpm', 'random-playback', 'online-available', 'capo', 'countdown'].forEach(id => {
         const control = document.getElementById(id);
         const disabled = id === 'online-available'
-            ? editLocked || state.songSource !== 'local'
+            ? editLocked || state.songSource !== 'local' || !canPublishOnline()
             : editLocked;
         if (control) control.disabled = disabled;
+        if (id === 'online-available' && control) {
+            control.title = canPublishOnline()
+                ? 'Publish this song online'
+                : 'Alleen de beheerder kan songs online zetten.';
+            control.closest('.online-toggle')?.classList.toggle('admin-only-disabled', disabled && !canPublishOnline());
+        }
         syncWheelAvailability(id, disabled);
     });
 

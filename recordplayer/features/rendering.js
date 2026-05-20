@@ -24,67 +24,16 @@
         : (editable ? (state.editMode ? 'Save song' : 'Edit song') : 'Only the owner can edit this cloud song');
     document.getElementById('cancel-edit').hidden = !state.editMode;
     document.getElementById('random-toggle')?.classList.toggle('active', !document.querySelector('.random-chord-controls')?.hidden);
-    const newSongButton = document.getElementById('new-song');
-    newSongButton.disabled = false;
-    newSongButton.textContent = state.songSource === 'cloud' ? 'New personal song' : 'New song';
     document.getElementById('export-song').disabled = !state.editMode || !activeSong();
     document.getElementById('import-song').disabled = !state.editMode || !canEditActiveSong();
     renderAuth();
 
-    renderSongList();
+    renderLibraryBrowser();
     renderEditor();
 }
 
 function renderSongList() {
-    const list = document.getElementById('song-list');
-    const query = state.search.trim().toLowerCase();
-    list.replaceChildren();
-
-    const matchingSongs = state.songs
-        .filter(song => `${song.title} ${formatSongAttribution(song)}`.toLowerCase().includes(query));
-    if (!matchingSongs.length) {
-        const empty = document.createElement('p');
-        empty.className = 'song-list-empty';
-        empty.textContent = state.songSource === 'cloud'
-            ? 'No online songs found.'
-            : 'No songs found.';
-        list.appendChild(empty);
-        return;
-    }
-
-    matchingSongs.forEach(song => {
-            const item = document.createElement('div');
-            item.className = 'song-list-row';
-
-            const button = document.createElement('button');
-            button.className = `song-list-item${song.id === state.activeSongId ? ' active' : ''}`;
-            button.type = 'button';
-            button.innerHTML = `<span class="song-list-title"></span><span class="song-list-artist"></span>`;
-            button.querySelector('.song-list-title').textContent = song.title || 'Untitled Song';
-            button.querySelector('.song-list-artist').textContent = formatSongAttribution(song);
-            button.addEventListener('click', () => {
-                stopSong();
-                state.activeSongId = song.id;
-                state.activeSectionId = song.sections[0]?.id || null;
-                state.activeSubsectionId = song.sections[0]?.subsections[0]?.id || null;
-                render();
-            });
-
-            const remove = document.createElement('button');
-            remove.className = 'delete-song-btn';
-            remove.type = 'button';
-            remove.title = 'Remove song';
-            remove.setAttribute('aria-label', `Remove ${song.title || 'Untitled Song'}`);
-            remove.disabled = !canEditSong(song) || state.songSource === 'cloud';
-            remove.textContent = '✕';
-            remove.addEventListener('click', event => {
-                event.stopPropagation();
-                openDeleteSongPopup(song.id);
-            });
-
-            item.append(button, remove);
-            list.appendChild(item);
-        });
+    renderLibraryBrowser();
 }
 
 let lastRenderedEditorSongId = null;
@@ -117,7 +66,7 @@ function renderEditor() {
     document.getElementById('transpose').value = clamp(song.transpose || 0, -12, 12);
     document.getElementById('playable-toggle').checked = Boolean(song.playable);
     document.getElementById('random-playback').checked = Boolean(song.randomPlayback);
-    document.getElementById('online-available').checked = isLocalSongOnline(song);
+    document.getElementById('online-available').checked = canPublishOnline() && isLocalSongOnline(song);
     document.getElementById('show-detailed-durations-edit').checked = state.showDetailedDurationsEdit;
     const displayDurationToggle = document.getElementById('show-detailed-durations-display');
     displayDurationToggle.checked = state.showDetailedDurationsDisplay;
